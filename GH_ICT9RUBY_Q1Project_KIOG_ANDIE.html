@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andie Kiog | Portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f7f7f7;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 800px;
+      background: #ffffff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    /* Top Navigation Bar */
+    header {
+      background-color: #9254C8;
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header .logo {
+      width: 32px;
+      height: 32px;
+      background-color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #9254C8;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 13px;
+      margin-left: 15px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Hero Section */
+    .hero {
+      background-color: #ead6fa;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden; 
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+    .hero h1 {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 6px;
+    }
+
+    .hero p {
+      font-size: 13px;
+      color: #666;
+    }
+
+
+    main {
+      padding: 30px 40px;
+    }
+
+    .section-badge {
+      background: linear-gradient(90deg, #9254C8, #B388EB);
+      color: white;
+      text-align: center;
+      padding: 8px;
+      border-radius: 6px;
+      font-size: 15px;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
+
+    .about-section {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .about-section p {
+      font-size: 13px;
+      line-height: 1.5;
+      color: #555;
+      padding: 0 20px;
+    }
+
+    /* Works Section */
+    .works-section {
+      margin-bottom: 35px;
+    }
+
+    .project-card {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 25px;
+      align-items: center;
+    }
+
+    .project-preview {
+      flex: 1;
+      border: 1.5px dashed #B388EB;
+      border-radius: 8px;
+      padding: 12px;
+      text-align: center;
+      background-color: #faf7fd;
+    }
+
+    .project-preview img {
+      width: 100%;
+      border-radius: 4px;
+      display: block;
+    }
+
+    .project-preview span {
+      display: block;
+      font-size: 11px;
+      color: #777;
+      margin-top: 6px;
+    }
+
+    .project-details {
+      flex: 1;
+    }
+
+    .project-details ul {
+      list-style-type: none;
+      font-size: 13px;
+      color: #444;
+      line-height: 1.8;
+    }
+
+    .project-details ul li::before {
+      content: "✔ ";
+      color: #4CAF50;
+      font-weight: bold;
+    }
+
+    .project-details a {
+      color: #9254C8;
+      text-decoration: none;
+    }
+
+    .project-details a:hover {
+      text-decoration: underline;
+    }
+
+    /* Contact Form */
+    .contact-section {
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 500px;
+      margin: 0 auto;
+      font-size: 12px;
+    }
+
+    label {
+      font-weight: bold;
+      color: #444;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 12px;
+    }
+
+    .radio-group,
+    .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 4px;
+      font-weight: normal;
+    }
+
+    .radio-group label,
+    .checkbox-group label {
+      font-weight: normal;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      cursor: pointer;
+    }
+
+    button[type="submit"] {
+      background-color: #6C2EB9;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #552296;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #9e58db;
+      color: white;
+      text-align: center;
+      padding: 12px;
+      font-size: 11px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Header -->
+  <header>
+    <div class="logo">AK</div>
+    <nav>
+      <a href="#about">About Me</a>
+      <a href="#works">My Works</a>
+      <a href="#contact">Contact Me</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="avatar">
+  <img src="PROFILE 2.jpg" alt="Profile Picture">
+</div>
+    <h1>Hello, I'm Andie Kiog</h1>
+    <p>A Student from OB Montessori Center, Section Grade 9 Ruby</p>
+  </section>
+
+  <main>
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="section-badge">About Me</div>
+      <p>
+        Hi! I'm Andie, a student passionate about playing volleyball, I play mostly as a Libero. 
+        I enjoy playing because I can have new teammates and learn more about a sport.
+      </p>
+    </section>
+
+    <!-- My Works Section -->
+    <section id="works" class="works-section">
+      <div class="section-badge">My Works</div>
+
+      <!-- Project 1 -->
+      <div class="project-card">
+        <div class="project-preview">
+          <img src="FAVARTIST.jpeg" alt="Project 1 preview">
+          <span>My Favorite Spotify Artist</span>
+        </div>
+        <div class="project-details">
+          <ul>
+            <li>HTML & CSS Projects</li>
+            <li>Spotify Artist</li>
+            <li>List, Links and Images</li>
+            <li><a href="https://github.com/Kiog-9R-AY2627/q1-project-kiog.git">View GitHub Repository</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <div class="project-preview">
+          <img src="RATE A MOVIE.jpeg" alt="Project 2 preview">
+          <span>My Rate a Movie Form</span>
+        </div>
+        <div class="project-details">
+          <ul>
+            <li>HTML & CSS Projects</li>
+            <li>HTML Forms</li>
+            <li>Movie Recommendations</li>
+            <li><a href="https://github.com/Kiog-9R-AY2627/q1-project-kiog.git">View GitHub Repository</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="section-badge">Contact Me</div>
+      
+      <form>
+        <div>
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" placeholder="Andie Kiog" required>
+        </div>
+
+        <div>
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" placeholder="kiog.as@obmontessori.edu.ph" required>
+        </div>
+
+        <div>
+          <label>How did you find me?</label>
+          <div class="radio-group">
+            <label><input type="radio" name="source" value="facebook"> Facebook</label>
+            <label><input type="radio" name="source" value="google"> Google</label>
+            <label><input type="radio" name="source" value="friends"> Friends</label>
+          </div>
+        </div>
+
+        <div>
+          <label>Interested In:</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="interest" value="web"> Web Design</label>
+            <label><input type="checkbox" name="interest" value="graphic"> Graphic Design</label>
+            <label><input type="checkbox" name="interest" value="robotics"> Robotics</label>
+          </div>
+        </div>
+
+        <div>
+          <label for="rating">Rate my Portfolio:</label>
+          <select id="rating">
+            <option value="" disabled selected>-- Select Rating --</option>
+            <option value="5">⭐⭐⭐⭐⭐ (5/5)</option>
+            <option value="4">⭐⭐⭐⭐ (4/5)</option>
+            <option value="3">⭐⭐⭐ (3/5)</option>
+            <option value="2">⭐⭐ (2/5)</option>
+            <option value="1">⭐ (1/5)</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="feedback">Any feedback?</label>
+          <textarea id="feedback" rows="3" placeholder="Write your thoughts..."></textarea>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2026 Andie Kiog. All rights reserved.
+  </footer>
+</div>
+
+</body>
+</html>
